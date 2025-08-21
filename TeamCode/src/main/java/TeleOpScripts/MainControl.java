@@ -87,7 +87,7 @@ public class MainControl extends OpMode {
                 Math.abs(rotate) > DEADZONE;
 
         if (joystickActive) {
-            // Calculate motor powers using cleaned up mecanum drive formula
+            // Calculate motor powers using cleaned up mecanum formula
             leftBackPower = (forward + strafe + rotate) * SPEED_MULTIPLIER;
             leftFrontPower = (forward - strafe + rotate) * SPEED_MULTIPLIER;
             rightFrontPower = (forward + strafe - rotate) * SPEED_MULTIPLIER;
