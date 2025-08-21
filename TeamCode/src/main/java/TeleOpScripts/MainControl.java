@@ -75,9 +75,11 @@ public class MainControl extends OpMode {
 
         // Forward/backward using both joysticks
         // Choose higher Y value for forward/backward movement
-        double leftY = -gamepad1.left_stick_y;
-        double rightY = -gamepad1.right_stick_y;
-        forward = Math.max(leftY, rightY);
+        double leftY = gamepad1.left_stick_y;
+        double rightY = gamepad1.right_stick_y;
+        forward = leftY + rightY;
+        forward = Range.clip(forward, -1.0, 1.0);
+
 
         // Check if any joystick is being used (outside deadzone)
         joystickActive = Math.abs(strafe) > DEADZONE ||
