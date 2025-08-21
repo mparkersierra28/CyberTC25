@@ -89,7 +89,7 @@ public class MainControl extends OpMode {
             leftBackPower = (forward + strafe + rotate) * SPEED_MULTIPLIER;
             leftFrontPower = (forward - strafe + rotate) * SPEED_MULTIPLIER;
             rightFrontPower = (forward + strafe - rotate) * SPEED_MULTIPLIER;
-            rightBackPower = (forward - strafe + rotate) * SPEED_MULTIPLIER;
+            rightBackPower = (forward - strafe - rotate) * SPEED_MULTIPLIER;
 
             // Clip powers to valid range
             leftBackPower = Range.clip(leftBackPower, -1.0, 1.0);
