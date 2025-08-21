@@ -86,8 +86,8 @@ public class MainControl extends OpMode {
 
         if (joystickActive) {
             // Calculate motor powers using cleaned up mecanum drive formula
-            leftBackPower = (forward - strafe + rotate) * SPEED_MULTIPLIER;
-            leftFrontPower = (forward + strafe - rotate) * SPEED_MULTIPLIER;
+            leftBackPower = (forward + strafe + rotate) * SPEED_MULTIPLIER;
+            leftFrontPower = (forward - strafe + rotate) * SPEED_MULTIPLIER;
             rightFrontPower = (forward + strafe - rotate) * SPEED_MULTIPLIER;
             rightBackPower = (forward - strafe + rotate) * SPEED_MULTIPLIER;
 
