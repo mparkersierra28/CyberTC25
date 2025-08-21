@@ -140,6 +140,15 @@ public class MainControl extends OpMode {
         // Send telemetry to dashboard
         dashboard.sendTelemetryPacket(packet);
 
+        if (joystickActive) {
+            telemetry.addData("Motor Powers", "Active");
+            telemetry.addData("LB Power", leftBackPower);
+            telemetry.addData("LF Power", leftFrontPower);
+            telemetry.addData("RF Power", rightFrontPower);
+            telemetry.addData("RB Power", rightBackPower);
+        } else {
+            telemetry.addData("Motor Powers", "Stopped");
+        }
         // Driver station telemetry
         telemetry.addData("Status", "Running");
         telemetry.addData("Joystick Active", joystickActive);
